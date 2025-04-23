@@ -2,7 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import imagebg from '../../assets/Facilities/schoolFacilities.avif'
+import imagebg from "../../assets/Facilities/schoolFacilities.avif";
+import facilityImage1 from "../../assets/Facilities/f-1.jpg";
+import facilityImage2 from "../../assets/Facilities/f-2.jpg";
+import facilityImage3 from "../../assets/Facilities/f-3.jpg";
+import facilityImage4 from "../../assets/Facilities/f-4.jpg";
 const features = [
   { text: "State-of-the-art classrooms with modern technology." },
   { text: "A vast library and knowledge center for research." },
@@ -66,12 +70,32 @@ const FacilitiesHeader = () => {
           </div>
           {/* Image Section */}
           <div className="col-span-12 lg:col-span-6">
-            <div className="mt-12 lg:mt-0">
+            {/* <div className="mt-12 lg:mt-0">
               <img
                 src={imagebg}
                 alt="School Facilities"
                 className="max-w-full h-auto rounded-2xl"
               />
+            </div> */}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                facilityImage1,
+                facilityImage2,
+                facilityImage3,
+                facilityImage4,
+              ].map((img, idx) => (
+                <div
+                  key={idx}
+                  className="overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
+                >
+                  <img
+                    src={img}
+                    alt={`Facility ${idx + 1}`}
+                    className="w-full h-64 object-cover transform hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>

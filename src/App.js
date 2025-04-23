@@ -53,7 +53,7 @@ function App() {
 
   // WhatsApp click handler
   const handleWhatsAppClick = () => {
-    const whatsappUrl = `https://wa.me/+918088335006`; // Add your WhatsApp number here
+    const whatsappUrl = `https://wa.me/+919916907216`; // Add your WhatsApp number here
     window.open(whatsappUrl, "_blank");
   };
 
