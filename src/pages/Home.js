@@ -9,6 +9,7 @@ import FeaturesSection from "../component/FeaturesSection";
 import PrincipleMessage from "../component/DirectorsMessage";
 import Numbers from "../component/Numbers";
 import Tagline from "../component/Tagline";
+import AwardMarquee from "../component/AwardMarquee";
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
 
@@ -30,6 +31,7 @@ const Home = () => {
       <Numbers/>
       <Tagline/>
       <Awards />
+      <AwardMarquee />
       <Footer />
       {showPopup && <EnquiryPopUp onClose={() => setShowPopup(false)} />}
     </div>

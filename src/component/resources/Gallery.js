@@ -1,6 +1,10 @@
 import React from "react";
 import gallery2024 from "../../assets/gallery/2024.jpg";
-// import gallery2023 from "../../assets/gallery/2024.jpeg";
+import gallery2023 from "../../assets/gallery/2023.jpg";
+import gallery2022 from "../../assets/gallery/2022.jpg"; 
+import gallery2021 from "../../assets/gallery/2021.jpg";
+import gallery2020 from "../../assets/gallery/2020.jpg";
+import gallery2019 from "../../assets/gallery/2019.jpg";
 import Heading from "../../assets/gallery/heading.avif";
 const Gallery = () => {
   return (
@@ -52,7 +56,7 @@ const Gallery = () => {
           <div className=" break-inside-avoid mb-8 cursor-pointer">
             <img
               className="h-auto w-full rounded-lg"
-              src={gallery2024}
+              src={gallery2023}
               alt="Gallery "
             />
             <h2 className="text-center font-bold items-center text-[20px] text-blue-600">YEAR 2023-24</h2>
@@ -61,7 +65,7 @@ const Gallery = () => {
           <div className=" break-inside-avoid mb-8 cursor-pointer">
             <img
               className="h-auto w-full rounded-lg"
-              src={gallery2024}
+              src={gallery2022}
               alt="Gallery "
             />
             <h2 className="text-center font-bold items-center text-[20px] text-blue-600">YEAR 2022-23</h2>
@@ -70,7 +74,7 @@ const Gallery = () => {
           <div className=" break-inside-avoid mb-8 cursor-pointer">
             <img
               className="h-auto w-full rounded-lg"
-              src={gallery2024}
+              src={gallery2021}
               alt="Gallery "
             />
             <h2 className="text-center font-bold items-center text-[20px] text-blue-600">YEAR 2021-22</h2>
@@ -79,7 +83,7 @@ const Gallery = () => {
           <div className=" break-inside-avoid mb-8 cursor-pointer">
             <img
               className="h-auto w-full rounded-lg"
-              src={gallery2024}
+              src={gallery2020}
               alt="Gallery "
             />
             <h2 className="text-center font-bold items-center text-[20px] text-blue-600">YEAR 2020-21</h2>
@@ -88,7 +92,7 @@ const Gallery = () => {
           <div className=" break-inside-avoid mb-8 cursor-pointer">
             <img
               className="h-auto w-full rounded-lg"
-              src={gallery2024}
+              src={gallery2019}
               alt="Gallery "
             />
             <h2 className="text-center font-bold items-center text-[20px] text-blue-600">YEAR 2019-20</h2>
