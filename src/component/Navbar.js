@@ -117,7 +117,7 @@ const Navbar = () => {
               <button
                 className={`flex items-center text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium" ${
                   currentPath.startsWith("/admission") ||
-                  ["/admissionprograms", "/blogs", "/publications"].includes(
+                  ["/admissionprograms", "/enquiry"].includes(
                     currentPath
                   )
                     ? "text-orange-600 font-bold"
@@ -157,9 +157,9 @@ const Navbar = () => {
             {/* Resources with Submenu */}
             <div className="relative group">
               <button
-                className={`flex items-center text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium" ${
-                  currentPath.startsWith("/resources") ||
-                  ["/gallery", "/enquiry"].includes(currentPath)
+                className={`flex items-center px-3 py-2 text-sm font-medium ${
+                  currentPath.startsWith("/resourcessds") ||
+                  ["/gallery", "/publications", "/blogs"].includes(currentPath)
                     ? "text-orange-600 font-bold"
                     : "text-gray-900 hover:text-gray-700"
                 }`}
@@ -167,37 +167,31 @@ const Navbar = () => {
                 Resources
                 <span className="ml-1 text-sm">&#9662;</span>
               </button>
-              <div
-                className={`absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-md font-medium py-4 px-1  w-48 z-50"  ${
-                  isActive("/gallery")
-                    ? "text-orange-600 font-bold "
-                    : "text-gray-900 hover:text-gray-700"
-                }`}
-              >
+
+              <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-md font-medium py-4 px-1 w-48 z-50">
                 <Link
                   to="/gallery"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100  hover:rounded-lg"
+                  className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg ${
+                    isActive("/gallery")
+                      ? "text-orange-600 font-bold"
+                      : "text-gray-900 hover:text-gray-700"
+                  }`}
                 >
                   Gallery
                 </Link>
-                {/* <Link to="/counseling" className="block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg">
-                  Career Counseling
-                </Link> */}
-                {/* <Link to="/calendar" className="block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg">
-                  School Calendar
-                </Link> */}
+
                 <a
                   href={calenderpdf}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg"
+                  className="block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg text-gray-900"
                 >
                   School Calendar
                 </a>
 
                 <Link
                   to="/publications"
-                  className={`block px-4 py-2 text-sm hover:bg-gray-100  hover:rounded-lg" ${
+                  className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg ${
                     isActive("/publications")
                       ? "text-orange-600 font-bold"
                       : "text-gray-900 hover:text-gray-700"
@@ -205,9 +199,10 @@ const Navbar = () => {
                 >
                   Publications
                 </Link>
+
                 <Link
                   to="/blogs"
-                  className={`block px-4 py-2 text-sm hover:bg-gray-100  hover:rounded-lg"  ${
+                  className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg ${
                     isActive("/blogs")
                       ? "text-orange-600 font-bold"
                       : "text-gray-900 hover:text-gray-700"
@@ -217,6 +212,7 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
+
             <Link
               to="/faculty"
               className={`text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium"  ${
