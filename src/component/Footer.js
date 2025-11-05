@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from '../assets/logo/logo.jpg'
+// import logo from '../assets/logo/logo.jpg'
+import logo from '../assets/logo/new logo.jpg'
 import { Icon } from '@iconify/react';
 
 const Footer = () => {

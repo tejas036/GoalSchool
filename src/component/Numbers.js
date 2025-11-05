@@ -4,27 +4,37 @@ import CountUp from "react-countup";
 
 const cards = [
   {
-    count: 17,
+    count: 10,
     title: "Years of Excellence",
+    plus: false, // no +
   },
   {
-    count: 1267,
+    count: 100,
     title: "Students",
+    plus: true,  // show +
   },
   {
-    count: 278,
+    count: 200,
     title: "Faculty Members",
+    plus: true,  // show +
   },
-  {
-    count: 355,
-    title: "Employees Worldwide",
-  },
+  // {
+  //   count: 355,
+  //   title: "Employees Worldwide",
+  //   plus: false,
+  // },
 ];
 
 const CardItem = ({ item, isVisible }) => (
   <div>
     <h2 className="font-bold text-2xl md:text-[45px] leading-none mb-4">
-      {isVisible && <CountUp end={item.count} duration={2} />}
+      {isVisible && (
+        <CountUp
+          end={item.count}
+          duration={2}
+          suffix={item.plus ? "+" : ""}
+        />
+      )}
     </h2>
     <p className="text-base leading-none uppercase">
       <em>{item.title}</em>
@@ -45,22 +55,15 @@ const Numbers = () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true); // Start the animation when the section is visible
-          }
+          if (entry.isIntersecting) setIsVisible(true);
         });
       },
-      { threshold: 0.1 } // Trigger when 10% of the section is visible
+      { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
 
@@ -80,8 +83,8 @@ const Numbers = () => {
             "linear-gradient(135deg,rgba(255, 65, 109, 0.85),rgba(255, 75, 43, 0.85))",
         }}
       />
-      <div className="container px-4">
-        <div className="grid grid-cols-12 text-center">
+      <div className="container px-auto">
+        <div className="grid grid-cols-12 text-center lg:pl-80">
           {cards.map((item, i) => (
             <div
               className="col-span-12 sm:col-span-6 lg:col-span-3 mt-8"

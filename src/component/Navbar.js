@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // import logo from '../assets/logo.png'
 import calenderpdf from "../assets/2024-25 year plan.pdf";
-import logo from "../assets/logo/logo.jpg";
+import logo from "../assets/logo/new logo.jpg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <div className="flex-shrink-0 cursor-pointer" onClick={handleclick}>
-            <img className="h-18 w-32 " src={logo} alt="Goal School Logo" />
+            <img className="h-18 w-32 p-2 " src={logo} alt="Goal School Logo" />
           </div>
 
           {/* Desktop Menu */}
@@ -70,7 +70,7 @@ const Navbar = () => {
                 <span className="ml-1 text-sm">&#9662;</span>
               </button>
               <div className="absolute left-0 hidden group-hover:block bg-white shadow-lg rounded-md font-medium py-4 px-1  w-48 z-50">
-                <Link
+                {/* <Link
                   to="/motto"
                   className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg" ${
                     isActive("/motto")
@@ -79,7 +79,7 @@ const Navbar = () => {
                   }`}
                 >
                   Motto
-                </Link>
+                </Link> */}
                 <Link
                   to="/history"
                   className={`block px-4 py-2 text-sm hover:bg-gray-100 hover:rounded-lg" ${

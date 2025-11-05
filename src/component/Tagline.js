@@ -131,7 +131,7 @@ const Tagline = () => {
 				<div className=" text-center items-center">
 					<div className="col-span-12 lg:col-span-7 xl:col-span-6 text-center lg:text-start mb-12 lg:mb-0">
 						<h2 className="text-xl md:text-3xl font-bold leading-tight text-center tracking-wide lg:text-3xl mb-6">
-                        Admissions Open for AY <span className="text-green-500">2025 - 2026</span> Goal Public International School
+                        Admissions Open for AY <span className="text-green-500">2026 - 2027</span> Goal Public International School
 						</h2>
 					
                         <button className="navbutton bg-blue-600 text-white py-2 px-6 mx-auto rounded-md flex items-center hover:bg-blue-700 transition duration-300">

@@ -25,8 +25,18 @@ const Gallery = () => {
           <span className="text-green-500">Learning and Fun !!</span>
         </h1>
         <p className="text-md font-semibold leading-snug opacity-75 mt-3">
-          From classrooms to playgrounds, we've captured it all,  
-          Celebrating every smile, every achievement.
+          {/* From classrooms to playgrounds, we've captured it all,  
+          Celebrating every smile, every achievement. */}
+         <b>The Gallery of Goal International Public School,</b>  is a vibrant reflection of the school’s spirit, achievements, and creativity. It stands as a visual chronicle of our students’ journey through learning, exploration, and excellence. Every wall of the gallery speaks of the dedication, talent, and enthusiasm that define life at GIPS.
+         <br/>
+         <br/>
+
+From colorful displays of art and craft to photographs capturing memorable school events, celebrations, competitions, and achievements, the gallery showcases the all-round development of our students. It highlights not only academic excellence but also the rich cultural, artistic, and sporting talents nurtured within the school.   <br/>   <br/>
+
+The gallery also serves as an inspiration zone for students—motivating them to dream big, work hard, and take pride in their accomplishments. It celebrates every milestone of the school’s growth and reminds the entire GIPS family of the values of creativity, unity, and excellence that guide us.   <br/>   <br/>
+
+Truly, the Gallery of Goal International Public School is more than a display—it is a living reflection of our journey “From Learning to Leadership, from Goals to Greatness.”
+
         </p>
       </div>
 

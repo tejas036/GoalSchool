@@ -16,7 +16,7 @@ const EnquiryPopUp = ({ onClose }) => {
           &times;
         </button>
 
-        <p className="popup-heading">Admissions Open for AY 2025-26</p>
+        <p className="popup-heading">Admissions Open for AY 2026-27</p>
         <button className="popup-button" onClick={handleClick}>Enquiry Now</button>
       </div>
     </div>
