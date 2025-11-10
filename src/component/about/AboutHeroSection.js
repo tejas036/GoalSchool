@@ -149,7 +149,7 @@
 import bgImage6 from "../../assets/About/childrens.jpeg";
 
 const AboutHeroSection = () => {
-  const images = [bgImage6];
+  // const images = [bgImage6];
   // const [currentIndex, setCurrentIndex] = useState(0);
 
   // useEffect(() => {
