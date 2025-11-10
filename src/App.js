@@ -28,6 +28,7 @@ import TransportationPage from "./pages/Facilities/TransportationPage";
 import SecurityPage from "./pages/Facilities/SecurityPage";
 import TechnologyPage from "./pages/Facilities/TechnologyPage";
 import DayCareCenterPage from "./pages/Facilities/DayCareCenterPage";
+import Curriculum from "./pages/FeatureSection/Curriculum";
 // Custom hook to scroll to the top on route change
 const useScrollToTop = () => {
   const location = useLocation();
@@ -63,6 +64,10 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
+          <Route
+          path="/featureSection/IcseCurriculum"
+          element={<Curriculum />}
+        />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
