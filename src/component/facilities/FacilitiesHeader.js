@@ -44,7 +44,7 @@ const FacilitiesHeader = () => {
         <div className="grid grid-cols-12 items-center gap-4 mb-12">
           {/* Text Section */}
           <div className="col-span-12 lg:col-span-6">
-            <h6 className="font-medium opacity-70 mb-2">Hello Visitor,</h6>
+            {/* <h6 className="font-medium opacity-70 mb-2">Hello Visitor,</h6> */}
             <h1 className="text-3xl leading-none font-bold uppercase tracking-wider mb-2">
               Welcome to Goal School
             </h1>

@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import Loader from "./component/loader/Loader";
 import Home from "./pages/Home";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,6 +34,11 @@ import SecurityPage from "./pages/Facilities/SecurityPage";
 import TechnologyPage from "./pages/Facilities/TechnologyPage";
 import DayCareCenterPage from "./pages/Facilities/DayCareCenterPage";
 import Curriculum from "./pages/FeatureSection/Curriculum";
+import PersonalizedLearningExperience from "./assets/members/PersonalizedLearningExperience";
+import QualityEducation from "./assets/members/QualityEducation";
+// import ArtMusicRooms from "./component/facilities/ArtMusicRooms";
+// import Medicare from "./component/facilities/Medicare";
+// import SportsComplex from "./component/facilities/SportsComplex";
 // Custom hook to scroll to the top on route change
 const useScrollToTop = () => {
   const location = useLocation();
@@ -64,10 +74,12 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-          <Route
-          path="/featureSection/IcseCurriculum"
-          element={<Curriculum />}
+        <Route path="/featureSection/IcseCurriculum" element={<Curriculum />} />
+        <Route
+          path="/featureSection/personalized-learning"
+          element={<PersonalizedLearningExperience />}
         />
+        <Route path="/featureSection/quality-education" element={<QualityEducation />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -97,25 +109,16 @@ function App() {
           path="/facilities/CounselingServices"
           element={<CounselingServicesPage />}
         />
-        <Route
-          path="/facilities/cafeteria"
-          element={<CafeteriaPage />}
-        />
+        <Route path="/facilities/cafeteria" element={<CafeteriaPage />} />
         <Route
           path="/facilities/transportation"
           element={<TransportationPage />}
         />
-        <Route
-          path="/facilities/security"
-          element={<SecurityPage />}
-        />
-        <Route
-          path="/facilities/technology"
-          element={<TechnologyPage />}
-        />
+        <Route path="/facilities/security" element={<SecurityPage />} />
+        <Route path="/facilities/technology" element={<TechnologyPage />} />
         <Route
           path="/facilities/day-care-center"
-          element={<DayCareCenterPage/>}
+          element={<DayCareCenterPage />}
         />
       </Routes>
 
