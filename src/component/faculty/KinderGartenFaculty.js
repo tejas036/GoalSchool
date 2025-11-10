@@ -1,6 +1,6 @@
-import React from "react";
+
 import { motion } from "framer-motion";
-import ome from "../../assets/members/AramNayak2.jpg";
+
 import  bharati from '../../assets/faculty/Pre-Primary/bharati.JPG'
 import  Azmin from '../../assets/faculty/Pre-Primary/azmin.JPG'
 import  Sushmita from '../../assets/faculty/Pre-Primary/sushmita.JPG'

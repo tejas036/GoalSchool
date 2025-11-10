@@ -1,7 +1,7 @@
-import React from 'react'
+
 import Navbar from './Navbar'
 import Footer from './Footer'
-import imageside from '../assets/contactsideimage.jpg'
+
 
 const ContactUs = () => {
   return (

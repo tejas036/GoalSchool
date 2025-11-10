@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import  { useEffect, useRef, useState } from "react";
 import vissioj from "../../assets/About/vission.jpg"; // Vision image
-import Mission from "../../assets/About/mission.avif"; // Mission image
+
 
 const Motto = () => {
   const [visibleSections, setVisibleSections] = useState({

@@ -5,7 +5,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import kindergarten from '../assets/admissions/kindergarten.jpg'
 import class1 from '../assets/admissions/class1-10.jpg'
-import highschool from '../assets/admissions/college.jpg'
+
 import { Link } from "react-router-dom";
 
 const portfolios = [

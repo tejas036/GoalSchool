@@ -1,6 +1,4 @@
-import React from "react";
-import annual from "../assets/publications/annual.JPG";
-import science from "../assets/publications/scienceExhibition.JPG";
+
 import newsletter from "../assets/publications/newsletter.JPG";
 import magzineJan from "../assets/magzine/monthly magazine JAN.pdf";
 import magzineFeb from "../assets/magzine/monthly magazine FEB.pdf";
@@ -11,10 +9,9 @@ import magzineSept from "../assets/magzine/SEPTEMBER.pdf";
 import magzineOct from "../assets/magzine/OCTOBER.pdf";
 import magzineNov from "../assets/magzine/monthly magazine NOV.pdf";
 import magzineDec from "../assets/magzine/monthly magazine DEC.pdf";
-import sportImg from "../assets/magzine/sport.JPG";
+
 import annualDayImg from "../assets/magzine/annual_day.JPG";
-import m1 from "../assets/magzine/m1.jpg";
-import magzineNovImg from "../assets/magzine/m-nov.jpg";
+
 import annualDayImg2023 from '../assets/studentlife/AnnualDay2023.JPG'
 import juneImg from "../assets/magzine/june.JPG";
 import julyImg from "../assets/magzine/july.JPG";

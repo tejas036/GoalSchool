@@ -1,10 +1,10 @@
-import React, { useState, useRef } from "react";
+import { useState, useRef } from "react";
 import image1 from "../assets/awards/DSC.JPG";
 import image2 from "../assets/awards/DSC01617.JPG";
 import image3 from "../assets/awards/dubaiaward.JPG";
 import image4 from "../assets/awards/educationtoday.jpg";
 import image5 from "../assets/awards/excellence.jpg";
-import image6 from "../assets/awards/global2.jpg";
+
 import image7 from "../assets/awards/globaltriumph.jpg";
 
 const testimonials = [

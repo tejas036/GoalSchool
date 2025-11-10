@@ -1,8 +1,7 @@
-import React from "react";
+
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import imagebg from "../../assets/Facilities/schoolFacilities.avif";
 import facilityImage1 from "../../assets/Facilities/f-1.jpg";
 import facilityImage2 from "../../assets/Facilities/f-2.jpg";
 import facilityImage3 from "../../assets/Facilities/f-3.jpg";

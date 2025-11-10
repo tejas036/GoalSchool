@@ -1,12 +1,11 @@
 
 
 
-import React from "react";
 import PropTypes from "prop-types";
 import mentor from '../../assets/Alumni/mentoring.jpg'
 import careertalk from '../../assets/Alumni/carrerstalk.avif'
 // import highschool from '../assets/admissions/college.jpg'
-import { Link } from "react-router-dom";
+
 
 const portfolios = [
     {

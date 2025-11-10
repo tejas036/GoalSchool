@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import  { useState, useEffect } from "react";
 import Navbar from "../component/Navbar";
 import Header from "../component/Header";
 import Awards from "../component/Awards";
 import Footer from "../component/Footer";
 import EnquiryPopUp from "../component/enquiry/EnquiryPopUp";
-import Marquee from "../component/Marquee";
 import FeaturesSection from "../component/FeaturesSection";
 import PrincipleMessage from "../component/DirectorsMessage";
 import Numbers from "../component/Numbers";
