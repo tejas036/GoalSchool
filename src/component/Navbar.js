@@ -5,7 +5,7 @@ import calenderpdf from "../assets/Calendar2025 - 26.pdf";
 import logo from "../assets/logo/new logo.jpg";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeMenu, setActiveMenu] = useState(null);
+  const [activeMenu, setActiveMenu] = useState(null); 
 
   const location = useLocation();
 
