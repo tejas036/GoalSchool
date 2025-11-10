@@ -62,21 +62,21 @@ const facilities = [
   {
     icon: "⚕️",
     title: "Medicare",
-    path: "/medicare",
+    path: "/facilities/medicare",
     description:
       "On-campus medical facilities with trained staff to handle emergencies and provide routine health care.",
   },
   {
     icon: "⚽",
     title: "Sports Complex",
-    path: "/sports-complex",
+    path: "/facilities/sports-complex",
     description:
       "State-of-the-art facilities for indoor and outdoor sports activities, promoting physical fitness and teamwork.",
   },
   {
     icon: "🎨",
     title: "Art & Music Rooms",
-    path: "/art-music-rooms",
+    path: "/facilities/art-music-rooms",
     description:
       "Dedicated spaces to foster creativity in art, music, and dance, encouraging students to explore their artistic talents.",
   },

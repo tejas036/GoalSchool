@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import logo from "../../assets/Header/bg4.jpg";
+import logo from "../../assets/faculty/savitaMam.JPG";
 
 const AboutPrincipleMessage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -41,9 +41,9 @@ const AboutPrincipleMessage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 shadow-lg rounded-lg p-4 md:p-8">
         {/* Image Section */}
-        <div className="col-span-1 md:col-span-1 flex items-start">
+        <div className="col-span-1 md:col-span-1 flex items-center">
           <img
-            className="w-36 h-48 md:w-60 md:h-64 rounded-md shadow-md bg-contain"
+              className="w-72 h-48 md:w-full md:h-96 rounded-md shadow-md bg-contain"
             src={logo}
             alt="Dr. Manila Carvalho, Principal"
             loading="lazy"

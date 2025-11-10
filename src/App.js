@@ -1,10 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  
-  Route,  
-  Routes,
-  useLocation,
-} from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Loader from "./component/loader/Loader";
 import Home from "./pages/Home";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -36,9 +31,9 @@ import DayCareCenterPage from "./pages/Facilities/DayCareCenterPage";
 import Curriculum from "./pages/FeatureSection/Curriculum";
 import PersonalizedLearningExperience from "./assets/members/PersonalizedLearningExperience";
 import QualityEducation from "./assets/members/QualityEducation";
-// import ArtMusicRooms from "./component/facilities/ArtMusicRooms";
-// import Medicare from "./component/facilities/Medicare";
-// import SportsComplex from "./component/facilities/SportsComplex";
+import MedicarePage from "./pages/Facilities/Medicare";
+import SportsComplexPage from "./pages/Facilities/SportsComplexPage";
+import ArtMusicRoomsPage from "./pages/Facilities/ArtMusicRoomsPage";
 // Custom hook to scroll to the top on route change
 const useScrollToTop = () => {
   const location = useLocation();
@@ -79,7 +74,10 @@ function App() {
           path="/featureSection/personalized-learning"
           element={<PersonalizedLearningExperience />}
         />
-        <Route path="/featureSection/quality-education" element={<QualityEducation />} />
+        <Route
+          path="/featureSection/quality-education"
+          element={<QualityEducation />}
+        />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<ContactUs />} />
@@ -120,6 +118,10 @@ function App() {
           path="/facilities/day-care-center"
           element={<DayCareCenterPage />}
         />
+        <Route path="/facilities/art-music-rooms" element={<ArtMusicRoomsPage />} />
+        <Route path="/facilities/medicare" element={<MedicarePage />} />
+
+        <Route path="/facilities/sports-complex" element={<SportsComplexPage />} />
       </Routes>
 
       {/* WhatsApp Icon */}
