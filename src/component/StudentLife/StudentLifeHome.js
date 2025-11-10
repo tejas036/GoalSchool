@@ -5,7 +5,7 @@ import ClubsAndOrganizations from './ClubsAndOrganizations';
 import StudentEvents from './StudentEvents';
 const StudentLife = () => {
   const [activeTab, setActiveTab] = useState('campusLife');
-  const [searchQuery, setSearchQuery] = useState('');
+
 
   const tabs = [
     {
