@@ -1,4 +1,5 @@
 // IcseCurriculum.jsx
+// eslint-disable-next-line
 import React from "react";
 import BackgroundShapes from "../decor/BackgroundShapes";
 
