@@ -34,6 +34,12 @@ import QualityEducation from "./assets/members/QualityEducation";
 import MedicarePage from "./pages/Facilities/Medicare";
 import SportsComplexPage from "./pages/Facilities/SportsComplexPage";
 import ArtMusicRoomsPage from "./pages/Facilities/ArtMusicRoomsPage";
+import PhysicsLabPage from "./pages/Facilities/Physicslabpage";
+import ChemistryLabPage from "./pages/Facilities/ChemistryLabPage";
+import BiologyLabPage from "./pages/Facilities/BiologyLabPage";
+import ComputerLabPage from "./pages/Facilities/ComputerLabPage";
+
+
 // Custom hook to scroll to the top on route change
 const useScrollToTop = () => {
   const location = useLocation();
@@ -94,6 +100,11 @@ function App() {
         <Route path="/blogs" element={<BlogPage />} />
         <Route path="/admissionprograms" element={<AdmissionProgramsPage />} />
         <Route path="/facilities" element={<FacilitiesPage />}></Route>
+        <Route path="/facilities/chemistry-lab" element={<ChemistryLabPage />} />
+        <Route path="/facilities/computer-lab" element={<ComputerLabPage />} />
+
+<Route path="/facilities/biology-lab" element={<BiologyLabPage />} />
+
         {/* <Route path="/facilities" element={<CafeteriaPage />}></Route> */}
         <Route
           path="/facilities/modernclassroom"
@@ -122,6 +133,10 @@ function App() {
         <Route path="/facilities/medicare" element={<MedicarePage />} />
 
         <Route path="/facilities/sports-complex" element={<SportsComplexPage />} />
+        <Route path="/facilities/physics-lab" element={<PhysicsLabPage />} />
+        
+          {/* <Route path="/facilities/" element={<PhysicsLabPage />} /> */}
+
       </Routes>
 
       {/* WhatsApp Icon */}

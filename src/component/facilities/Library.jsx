@@ -18,7 +18,7 @@ import g12 from "../../assets/Facilities/sports/DSM_9183.JPG";
 const galleryImages = [g4, g5, g6, g7, g8, g9, g10, g11, g12];
 
 
-const SportsComplex = () => {
+const Library = () => {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -49,7 +49,7 @@ const SportsComplex = () => {
           {/* Title row */}
           <header className="mb-10 md:mb-12">
             <span className="inline-block mb-3 rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-              facilities
+              Facilities
             </span>
             <h1 className="text-3xl md:text-4xl font-extrabold text-blue-800 leading-tight">
               Sports at{" "}
@@ -63,7 +63,7 @@ const SportsComplex = () => {
           {/* Equal two columns on md+ */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-12 items-start">
             {/* Left: Gallery */}
-            {/* <section aria-label="Sports gallery" className="order-2 md:order-1">
+            <section aria-label="Sports gallery" className="order-2 md:order-1">
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {galleryImages.map((src, idx) => {
                   // simple variety: make every 3rd tile tall on md+
@@ -96,51 +96,7 @@ const SportsComplex = () => {
                   );
                 })}
               </div>
-            </section> */}
-
-            <section aria-label="Sports gallery" className="order-2 md:order-1">
-              <div
-                className="
-      grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 
-      gap-3 sm:gap-4 
-      auto-rows-[150px] sm:auto-rows-[180px] md:auto-rows-[200px]
-    "
-              >
-                {galleryImages.map((src, idx) => {
-                  // Assign some tiles to span multiple rows/cols for a collage look
-                  const layoutClass =
-                    idx % 7 === 0
-                      ? "col-span-2 row-span-2"
-                      : idx % 5 === 0
-                        ? "row-span-2"
-                        : "row-span-1 col-span-1";
-
-                  return (
-                    <button
-                      key={idx}
-                      onClick={() => openLightbox(idx)}
-                      className={`group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 ${layoutClass}`}
-                      aria-label={`Open image ${idx + 1} of ${galleryImages.length}`}
-                    >
-                      <img
-                        src={src}
-                        alt={`Sports photo ${idx + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                      <div className="absolute bottom-2 right-2 translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
-                        <span className="inline-flex items-center justify-center rounded-full bg-white/90 px-2 py-1 text-[11px] font-semibold text-gray-800 shadow">
-                          View
-                        </span>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
             </section>
-
 
             {/* Right: Text (equal width with left) */}
             <aside className="order-1 md:order-2">
@@ -244,5 +200,5 @@ const SportsComplex = () => {
   );
 };
 
-export default SportsComplex;
+export default Library;
 

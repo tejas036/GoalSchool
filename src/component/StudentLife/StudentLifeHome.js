@@ -1,45 +1,47 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import CampusLifeDetails from './CampusLifeDetails'; // Import the new component
+import { useNavigate } from 'react-router-dom';
+import CampusLifeDetails from './CampusLifeDetails';
 import ClubsAndOrganizations from './ClubsAndOrganizations';
 import StudentEvents from './StudentEvents';
+import AlumniPage from '../../pages/AlumniPage';
+
 const StudentLife = () => {
   const [activeTab, setActiveTab] = useState('campusLife');
-
+  const navigate = useNavigate(); // For navigation
 
   const tabs = [
     {
       id: 'campusLife',
       title: 'Campus Life',
       icon: '🏫',
-      content: (
-        <div>
-          
-          <CampusLifeDetails />
-        </div>
-      ),
+      content: <CampusLifeDetails />,
     },
     {
       id: 'clubsAndOrganizations',
       title: 'Clubs & Organizations',
       icon: '🎨',
-      content: (
-        <div>
-      <ClubsAndOrganizations/>
-        </div>
-      ),
+      content: <ClubsAndOrganizations />,
     },
     {
       id: 'studentEvents',
       title: 'Student Events',
       icon: '🎉',
-      content: (
-        <div>
-         <StudentEvents/>
-        </div>
-      ),
+      content: <StudentEvents />,
+    },
+    {
+      id: 'alumni',
+      title: 'Alumni',
+      icon: '🎓',
+      content: <AlumniPage />, // No content, redirect instead
     },
   ];
+
+  const handleTabClick = (tabId) => {
+   
+      setActiveTab(tabId);
+    
+  };
 
   const getFilteredContent = () => {
     const tab = tabs.find((tab) => tab.id === activeTab);
@@ -59,16 +61,15 @@ const StudentLife = () => {
               key={tab.id}
               className={`py-2 px-6 text-md font-semibold flex items-center gap-2 focus:outline-none transition-all ${
                 activeTab === tab.id
-                  ? 'text-blue-600 border-b-1 border-blue-600'
+                  ? 'text-blue-600 border-b-2 border-blue-600'
                   : 'text-gray-500'
               }`}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
             >
               <span>{tab.icon}</span> {tab.title}
             </button>
           ))}
         </div>
-      
       </div>
 
       {/* Tab Content */}

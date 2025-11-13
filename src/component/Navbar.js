@@ -234,7 +234,7 @@ const Navbar = () => {
             >
               Facilities
             </Link>
-            <Link
+            {/* <Link
               to="/alumni"
               className={`text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium"  ${
                 isActive("/alumni")
@@ -243,7 +243,7 @@ const Navbar = () => {
               }`}
             >
               Alumni
-            </Link>
+            </Link> */}
             <Link
               to="/student-life"
               className={`text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium"  ${
@@ -445,12 +445,12 @@ const Navbar = () => {
             >
               Facilities
             </Link>
-            <Link
+            {/* <Link
               to="/alumni"
               className="block text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium"
             >
               Alumni
-            </Link>
+            </Link> */}
             <Link
               to="/student-life"
               className="block text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium"

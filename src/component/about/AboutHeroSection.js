@@ -145,24 +145,15 @@
 
 
 
-// import React, { useState, useEffect } from "react";
+// import React, { useState, useimport React from "react";
 import bgImage6 from "../../assets/About/childrens.jpeg";
 
 const AboutHeroSection = () => {
-  // const images = [bgImage6];
-  // const [currentIndex, setCurrentIndex] = useState(0);
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  //   }, 3000); // Change image every 3 seconds
-  //   return () => clearInterval(interval);
-  // }, [images.length]);
-
   return (
     <div className="relative">
       {/* Main Content */}
       <div className="flex flex-wrap relative">
+        {/* Left Content */}
         <div className="w-full sm:w-8/12 mb-10">
           <div className="container mx-auto h-full sm:p-10">
             <nav className="flex px-4 justify-between items-center">
@@ -170,17 +161,18 @@ const AboutHeroSection = () => {
                 About Us
               </h1>
             </nav>
+
             <header className="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
               <div className="w-full">
                 <h1 className="text-2xl lg:text-3xl font-semibold capitalize">
-                  A place where <span className="text-orange-500">education meets innovation</span>, inspiring every child to achieve greatness
+                  A place where{" "}
+                  <span className="text-orange-500">education meets innovation</span>, inspiring every child to achieve greatness
                 </h1>
+
                 <div className="w-20 h-1 bg-green-700 my-4" />
+
                 <p className="text-sm mb-10">
-                  At Goal International Public School, education goes beyond
-                  knowledge transfer. Our mission is to nurture creativity,
-                  critical thinking, adaptability, and resilience in our
-                  students, preparing them for a rapidly changing world.
+                  At Goal International Public School, education goes beyond knowledge transfer. Our mission is to nurture creativity, critical thinking, adaptability, and resilience in our students, preparing them for a rapidly changing world.
                 </p>
 
                 <button className="navbutton bg-blue-600 text-white rounded-md flex items-center hover:bg-blue-700 transition duration-300 px-4 py-2">
@@ -190,9 +182,11 @@ const AboutHeroSection = () => {
             </header>
           </div>
         </div>
+
+        {/* Right Image */}
         <img
           src={bgImage6}
-          alt="Leafs"
+          alt="Children"
           className="w-full h-36 object-cover sm:h-[96vh] sm:w-4/12 hidden md:block"
         />
       </div>
@@ -217,3 +211,5 @@ const AboutHeroSection = () => {
 };
 
 export default AboutHeroSection;
+
+

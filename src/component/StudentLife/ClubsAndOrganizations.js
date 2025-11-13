@@ -1,42 +1,49 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const ClubsAndOrganizations = () => {
   const clubs = [
     {
-      name: 'Debate Club',
+      name: "Debate Club",
       description:
-        'Sharpen your critical thinking and public speaking skills by debating on contemporary issues.',
-      icon: '🎤',
+        "Sharpen your critical thinking and public speaking skills by debating on contemporary issues.",
+      icon: "🎤",
+      path: "/facilities/debate-club",
     },
     {
-      name: 'Music Club',
+      name: "Music Club",
       description:
-        'Join fellow musicians to create, perform, and appreciate diverse musical styles.',
-      icon: '🎵',
+        "Join fellow musicians to create, perform, and appreciate diverse musical styles.",
+      icon: "🎵",
+      path: "/facilities/art-music-rooms",
     },
     {
-      name: 'Sports Club',
+      name: "Sports Club",
       description:
-        'Engage in competitive and recreational sports to stay active and healthy.',
-      icon: '⚽',
+        "Engage in competitive and recreational sports to stay active and healthy.",
+      icon: "⚽",
+      path: "/facilities/sports-complex",
     },
     {
-      name: 'Art Club',
+      name: "Art Club",
       description:
-        'Explore your creativity and express yourself through painting, drawing, and crafts.',
-      icon: '🎨',
+        "Explore your creativity and express yourself through painting, drawing, and crafts.",
+      icon: "🎨",
+      path: "/facilities/art-music-rooms", // ✅ your requested path
     },
     {
-      name: 'Drama Club',
+      name: "Drama Club",
       description:
-        'Discover the joy of acting and storytelling in our vibrant drama club.',
-      icon: '🎭',
+        "Discover the joy of acting and storytelling in our vibrant drama club.",
+      icon: "🎭",
+      path: "/facilities/drama-club",
     },
     {
-      name: 'Photography Club',
+      name: "Photography Club",
       description:
-        'Capture memorable moments and develop your photography skills.',
-      icon: '📸',
+        "Capture memorable moments and develop your photography skills.",
+      icon: "📸",
+      path: "/facilities/photography-club",
     },
   ];
 
@@ -57,7 +64,7 @@ const ClubsAndOrganizations = () => {
         {clubs.map((club, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300"
+            className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col items-center"
           >
             <div className="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100 text-blue-600 text-3xl">
               {club.icon}
@@ -65,7 +72,15 @@ const ClubsAndOrganizations = () => {
             <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">
               {club.name}
             </h3>
-            <p className="text-gray-600 text-center">{club.description}</p>
+            <p className="text-gray-600 text-center mb-4">{club.description}</p>
+
+            {/* Explore Button (Links to path) */}
+            <Link
+              to={club.path}
+              className="mt-auto bg-blue-600 text-white px-5 py-2 rounded-md font-semibold hover:bg-blue-700 transition duration-300"
+            >
+              Explore
+            </Link>
           </div>
         ))}
       </div>
