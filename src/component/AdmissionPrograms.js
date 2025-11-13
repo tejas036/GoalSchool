@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import kindergarten from "../assets/admissions/kindergarten.jpg";
-import class1 from "../assets/admissions/class1-10.jpg"; // ✅ Photo you mentioned
+import kindergarten from "../assets/admissions/CLASS11.JPG";
+import class1 from "../assets/admissions/CLASS123.JPG"; // ✅ Photo you mentioned
 import { Link } from "react-router-dom";
 
 const portfolios = [

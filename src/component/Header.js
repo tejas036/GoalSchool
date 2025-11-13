@@ -3,12 +3,12 @@
 
 
 import React, { useState, useEffect } from "react";
-import bgImage from "../assets/Header/bg3.jpg";
-import bgImage2 from "../assets/Header/bg4.jpg";
-import bgImage3 from "../assets/Header/bg5.jpg";
-import bgImage4 from "../assets/Header/bg7.jpg";
-import bgImage5 from "../assets/Header/bg8.jpg";
-import bgImage6 from "../assets/Header/bg9.jpg";
+import bgImage from "../assets/About/IMG_5553.JPG";
+import bgImage2 from "../assets/About/IMG_5449.JPG";
+import bgImage3 from "../assets/About/IMG_0531.JPG";
+import bgImage4 from "../assets/About/IMG_5579.JPG";
+import bgImage5 from "../assets/About/DSC_2262.JPG";
+import bgImage6 from "../assets/About/IMG_0531.JPG";
 import { Icon } from "@iconify/react";
 import { useNavigate } from "react-router-dom";
 import './Header.css'

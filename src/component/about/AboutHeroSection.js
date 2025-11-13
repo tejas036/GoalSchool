@@ -146,7 +146,7 @@
 
 
 // import React, { useState, useimport React from "react";
-import bgImage6 from "../../assets/About/childrens.jpeg";
+import bgImage6 from "../../assets/About/Kids Section/10.JPG";
 
 const AboutHeroSection = () => {
   return (

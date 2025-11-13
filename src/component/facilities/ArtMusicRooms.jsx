@@ -1,6 +1,6 @@
 
 
-import artMusicImage from "../../assets/featureSectionImages/personalisedImage.jpg";
+import artMusicImage from "../../assets/featureSectionImages/IMG_0526.JPG";
  // ✅ You’ll add this image
 
 const ArtMusicRooms = () => {

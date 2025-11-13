@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import vissioj from "../../assets/About/vission.jpg"; // Vision image
-import Mission from "../../assets/About/mission.avif"; // Mission image
+import vissioj from "../../assets/About/Kids Section/11.JPG"; // Vision image
+import Mission from "../../assets/About/Kids Section/12.JPG"; // Mission image
 
 const VisionMission = () => {
   const [visibleSections, setVisibleSections] = useState({

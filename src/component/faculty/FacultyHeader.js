@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../../assets/faculty/group.jpg'
+import logo from '../../assets/faculty/IMG_5362.JPG'
 const FacultyHeader = () => {
   return (
     <header className="bg-white py-16 md:px-12">

@@ -1,5 +1,5 @@
 import React from "react";
-import building from '../../assets/About/Kids Section/7.jpg'
+import building from '../../assets/About/Kids Section/8.JPG'
 
 
 const History = () => {

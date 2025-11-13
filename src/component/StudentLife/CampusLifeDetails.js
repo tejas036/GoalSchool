@@ -1,5 +1,5 @@
 import React from 'react';
-import campuslifephoto from '../../assets/studentlife/campuslife.jpg'
+import campuslifephoto from '../../assets/About/IMG_5553.JPG'
 const CampusLifeDetails = () => {
   return (
     <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
