@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import CampusLifeDetails from './CampusLifeDetails';
 import ClubsAndOrganizations from './ClubsAndOrganizations';
 import StudentEvents from './StudentEvents';
