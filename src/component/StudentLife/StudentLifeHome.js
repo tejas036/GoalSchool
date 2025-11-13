@@ -8,7 +8,7 @@ import AlumniPage from '../../pages/AlumniPage';
 
 const StudentLife = () => {
   const [activeTab, setActiveTab] = useState('campusLife');
-  const navigate = useNavigate(); // For navigation
+  // const navigate = useNavigate(); // For navigation
 
   const tabs = [
     {
