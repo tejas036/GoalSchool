@@ -5,15 +5,16 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 // import imagebg from '../../assets/Facilities/knowledge.jpg';
 import BooksList from "./BooksList";
 
-import g4 from "../../assets/Facilities/sports/_DSC0013.JPG";
-import g5 from "../../assets/Facilities/sports/DSC_2058.JPG";
-import g6 from "../../assets/Facilities/sports/DSC_2063.JPG";
-import g7 from "../../assets/Facilities/sports/DSM_8904.JPG";
-import g8 from "../../assets/Facilities/sports/DSM_8910.JPG";
-import g9 from "../../assets/Facilities/sports/DSM_9161.JPG";
-import g10 from "../../assets/Facilities/sports/DSM_9171.JPG";
-import g11 from "../../assets/Facilities/sports/DSM_9177.JPG";
-import g12 from "../../assets/Facilities/sports/DSM_9183.JPG";
+import g4 from "../../assets/Facilities/library/l1.JPG";
+import g5 from "../../assets/Facilities/library/l2.JPG";
+import g6 from "../../assets/Facilities/library/l3.JPG";
+import g7 from "../../assets/Facilities/library/l4.JPG";
+import g8 from "../../assets/Facilities/library/l5.JPG";
+import g9 from "../../assets/Facilities/library/l6.JPG";
+import g10 from "../../assets/Facilities/library/l7.JPG";
+import g11 from "../../assets/Facilities/library/l8.JPG";
+import g12 from "../../assets/Facilities/library/l9.JPG";
+
 
 const galleryImages = [g4, g5, g6, g7, g8, g9, g10, g11, g12];
 const features = [

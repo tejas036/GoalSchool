@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import daycareImg from '../../assets/Facilities/daycare.jpg'
+import daycareImg from '../../assets/Facilities/daycarenew.JPG'
 
 const features = [
   { text: "Safe and nurturing environment for young children." },

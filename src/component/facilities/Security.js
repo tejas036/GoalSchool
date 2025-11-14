@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import securityImg from '../../assets/Facilities/security.webp'; // Update image path as needed
+import securityImg from '../../assets/Facilities/DSC_2262.JPG'; // Update image path as needed
 
 const features = [
   { text: "Round-the-clock security with trained personnel." },

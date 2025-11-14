@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import cafeteriaImg from '../../assets/Facilities/cafeteria.webp'; // Update path if needed
+import cafeteriaImg from '../../assets/Facilities/counselling.avif'; // Update path if needed
 
 const features = [
   { text: "Nutritious and hygienic meals prepared daily." },

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import transportImg from '../../assets/Facilities/transportation.jpg'; // Update path if needed
+import transportImg from '../../assets/Facilities/IMG_5593.JPG'; // Update path if needed
 
 const features = [
   { text: "Safe and punctual transport facility covering major city areas." },
