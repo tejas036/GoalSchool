@@ -9,7 +9,7 @@ const cards = [
     plus: false, // no +
   },
   {
-    count: 100,
+    count: 1000,
     title: "Students",
     plus: true,  // show +
   },
