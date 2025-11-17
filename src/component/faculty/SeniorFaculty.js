@@ -4,7 +4,7 @@ import deepa from "../../assets/faculty/senior-faculty/deepag.JPG";
 import swati from "../../assets/faculty/senior-faculty/swati.JPG";
 import deepa2 from "../../assets/faculty/senior-faculty/deepak.JPG";
 import Alisha from "../../assets/faculty/senior-faculty/alisha.JPG";
-import Vandana from "../../assets/faculty/senior-faculty/vandana.JPG";
+// import Vandana from "../../assets/faculty/senior-faculty/vandana.JPG";
 import Akshita from "../../assets/faculty/senior-faculty/akshita.JPG";
 import Swapnaja from "../../assets/faculty/senior-faculty/swapnaja.JPG";
 import Shweta from "../../assets/faculty/senior-faculty/shweta.n.JPG";
@@ -28,6 +28,19 @@ import Veena from "../../assets/faculty/senior-faculty/veena.JPG";
 import Nivedita from "../../assets/faculty/senior-faculty/nivedita.1.JPG";
 import Vanita from "../../assets/faculty/senior-faculty/vanita2.JPG";
 import Prashant from "../../assets/faculty/senior-faculty/prashant.JPG";
+import NIRMALA from "../../assets/juniorFaculty/2.png";
+// import NIRMALA from "../../assets/juniorFaculty/2.png";
+import PAVITRA from "../../assets/juniorFaculty/3.png";
+import HARSHITA from "../../assets/juniorFaculty/4.png";
+import DHANYA from "../../assets/juniorFaculty/5.png";
+import VAISHNAV from "../../assets/juniorFaculty/6.png";
+import SHIBILI from "../../assets/juniorFaculty/7.png";
+import GOPIKA from "../../assets/juniorFaculty/8.png";
+import BIBIYA from "../../assets/juniorFaculty/9.png";
+import AGNES from "../../assets/juniorFaculty/10.png";
+import SANKET from "../../assets/juniorFaculty/11.png";
+import BHAVYA from "../../assets/juniorFaculty/12.png";
+import NAMITA from "../../assets/juniorFaculty/13.png";
 
 const facultyData = [
   { name: "Mrs. Baby Benjamin", photo: Baby, designation: "History Teacher" },
@@ -54,10 +67,24 @@ const facultyData = [
   { name: "Mrs. Pankaja Naik", photo: Pankaja, designation: "Hindi Teacher" },
   { name: "Ms. Shraddha Moger", photo: Shraddha, designation: "Maths Teacher" },
   { name: "Ms. Pavitra Naik", photo: Pavitra, designation: "EVS Teacher" },
-  { name: "Ms. Vandana Fernandes", photo: Vandana, designation: "English Teacher" },
+  // { name: "Ms. Vandana Fernandes", photo: Vandana, designation: "English Teacher" },
   { name: "Mr. Abhishek Kalas", photo: Abhishek, designation: "Physics Teacher" },
   { name: "Ms. Akshita Naik", photo: Akshita, designation: "EVS Teacher" },
   { name: "Mrs. Swapnaja Naik", photo: Swapnaja, designation: "Hindi Teacher" },
+  { name: "Ms. Nirmala Fernandes", photo: NIRMALA, designation: "History Teacher" },
+  //  { name: "Ms. Nirmala Fernandes", photo: NIRMALA, designation: "History Teacher" },
+  { name: "Ms. Pavitra Rajeshwar Naik", photo: PAVITRA, designation: "Chemistry Teacher" },
+  { name: "Ms. Harshita Halkar", photo: HARSHITA, designation: "History Teacher" },
+  { name: "Ms. Dhanya Hareshwar Naik", photo: DHANYA, designation: "Biology Teacher" },
+  { name: "Ms. M. V. Vaishnav", photo: VAISHNAV, designation: "Maths Teacher" },
+  { name: "Mr. Shibili Farseen", photo: SHIBILI, designation: "Maths Teacher" },
+  { name: "Ms. Gopika Krishnan T. V", photo: GOPIKA, designation: "English Teacher" },
+  { name: "Ms. Bibiya Thomas", photo: BIBIYA, designation: "English Teacher" },
+  { name: "Ms. Agnes Thomas", photo: AGNES, designation: "English Teacher" },
+  { name: "Mr. Sanket Gaonkar", photo: SANKET, designation: "Maths Teacher" },
+  { name: "Mrs. Bhavya S. Naik", photo: BHAVYA, designation: "Physics Teacher" },
+  { name: "Mrs. Namita Narayana V A", photo: NAMITA, designation: "Hindi Teacher" },
+
 ];
 
 const SeniorFaculty = () => {

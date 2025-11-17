@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 import bharati from "../../assets/faculty/Pre-Primary/bharati.JPG";
 import Azmin from "../../assets/faculty/Pre-Primary/azmin.JPG";
-import Sushmita from "../../assets/faculty/Pre-Primary/sushmita.JPG";
-import Veronica from "../../assets/faculty/Pre-Primary/veronica.JPG";
+// import Sushmita from "../../assets/faculty/Pre-Primary/sushmita.JPG";
+// import Veronica from "../../assets/faculty/Pre-Primary/veronica.JPG";
 import Roslin from "../../assets/faculty/Pre-Primary/glanet.JPG";
 import Sangeeta from "../../assets/faculty/Pre-Primary/sangeeta.JPG";
 import Shweta from "../../assets/faculty/Pre-Primary/shweta.g.JPG";
@@ -23,12 +23,12 @@ const facultyData = [
     designation: "English Teacher",
     classesHandled: "LKG, UKG",
   },
-  {
-    name: "Ms. Veronica Gonsalves",
-    photo: Veronica,
-    designation: "EVS Teacher",
-    classesHandled: "LKG, UKG",
-  },
+  // {
+  //   // name: "Ms. Veronica Gonsalves",
+  //   // photo: Veronica,
+  //   // designation: "EVS Teacher",
+  //   // classesHandled: "LKG, UKG",
+  // },
   {
     name: "Mrs. Bharati Naik",
     photo: bharati,
@@ -41,12 +41,12 @@ const facultyData = [
     designation: "English Teacher",
     classesHandled: "LKG, UKG",
   },
-  {
-    name: "Ms. Sushmita Naik",
-    photo: Sushmita,
-    designation: "EVS Teacher",
-    classesHandled: "Nursery, UKG",
-  },
+  // {
+  //   // name: "Ms. Sushmita Naik",
+  //   // photo: Sushmita,
+  //   // designation: "EVS Teacher",
+  //   // classesHandled: "Nursery, UKG",
+  // },
   {
     name: "Ms. Roslin Fernandes",
     photo: Roslin,

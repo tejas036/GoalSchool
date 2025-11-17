@@ -2,7 +2,7 @@ import React from "react";
 import logo from '../../assets/faculty/IMG_5362.JPG'
 const FacultyHeader = () => {
   return (
-    <header className="bg-white py-16 md:px-12">
+    <header className=" py-16 md:px-12">
       <div className="max-w-7xl mx-auto px-6 lg:flex lg:items-center lg:justify-between">
         {/* Text Section */}
         <div className="lg:w-1/2 mr-5">

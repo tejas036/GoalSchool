@@ -153,9 +153,11 @@ const AboutHeroSection = () => {
     <div className="relative">
       {/* Main Content */}
       <div className="flex flex-wrap relative">
+        
         {/* Left Content */}
         <div className="w-full sm:w-8/12 mb-10">
           <div className="container mx-auto h-full sm:p-10">
+            
             <nav className="flex px-4 justify-between items-center">
               <h1 className="text-2xl md:text-3xl pl-2 my-2 mt-6 border-l-4 font-sans font-bold border-blue-400">
                 About Us
@@ -164,6 +166,7 @@ const AboutHeroSection = () => {
 
             <header className="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
               <div className="w-full">
+
                 <h1 className="text-2xl lg:text-3xl font-semibold capitalize">
                   A place where{" "}
                   <span className="text-orange-500">education meets innovation</span>, inspiring every child to achieve greatness
@@ -172,12 +175,16 @@ const AboutHeroSection = () => {
                 <div className="w-20 h-1 bg-green-700 my-4" />
 
                 <p className="text-sm mb-10">
-                  At Goal International Public School, education goes beyond knowledge transfer. Our mission is to nurture creativity, critical thinking, adaptability, and resilience in our students, preparing them for a rapidly changing world.
+                  At Goal International Public School, education goes beyond 
+                  knowledge transfer. Our mission is to nurture creativity, 
+                  critical thinking, adaptability, and resilience in our 
+                  students, preparing them for a rapidly changing world.
                 </p>
 
                 <button className="navbutton bg-blue-600 text-white rounded-md flex items-center hover:bg-blue-700 transition duration-300 px-4 py-2">
                   Learn more
                 </button>
+
               </div>
             </header>
           </div>
@@ -211,5 +218,6 @@ const AboutHeroSection = () => {
 };
 
 export default AboutHeroSection;
+
 
 
