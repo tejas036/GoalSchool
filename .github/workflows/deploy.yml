@@ -38,7 +38,7 @@ jobs:
 
     # 🔐 This links to the 'production' environment with approval
     environment:
-      name: production
+      name: Production
       url: http://goalschool.edu.in
 
     steps:
