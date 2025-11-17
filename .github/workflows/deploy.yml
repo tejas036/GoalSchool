@@ -51,6 +51,30 @@ jobs:
       - name: List build files
         run: ls -R build
 
+      # 🔍 Debug: check that secrets are set (without showing password)
+      - name: Debug connection variables (no password)
+        run: |
+          echo "SERVER_HOST: ${{ secrets.SERVER_HOST }}"
+          echo "SERVER_USER: ${{ secrets.SERVER_USER }}"
+          echo "SERVER_PATH: ${{ secrets.SERVER_PATH }}"
+          if [ -z "${{ secrets.SERVER_HOST }}" ]; then echo "ERROR: SERVER_HOST is empty"; fi
+          if [ -z "${{ secrets.SERVER_USER }}" ]; then echo "ERROR: SERVER_USER is empty"; fi
+          if [ -z "${{ secrets.SERVER_PASSWORD }}" ]; then echo "ERROR: SERVER_PASSWORD is empty"; fi
+          if [ -z "${{ secrets.SERVER_PATH }}" ]; then echo "ERROR: SERVER_PATH is empty"; fi
+
+      # (Optional but very useful) Try SSH and list target dir
+      - name: Test SSH and list target directory
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 22
+          script: |
+            echo "Connected to server"
+            ls -la ${{ secrets.SERVER_PATH }}
+            ls -la ${{ secrets.SERVER_PATH }}/build || echo "build folder does not exist yet"
+
       - name: Upload build to server (SCP)
         uses: appleboy/scp-action@v0.1.7
         with:
@@ -60,14 +84,4 @@ jobs:
           port: 22
           source: "build/*"
           target: "${{ secrets.SERVER_PATH }}/build"
-
-      # Optional: reload apache (usually not needed for static files)
-      # - name: Reload Apache
-      #   uses: appleboy/ssh-action@v0.1.10
-      #   with:
-      #     host: ${{ secrets.SERVER_HOST }}
-      #     username: ${{ secrets.SERVER_USER }}
-      #     password: ${{ secrets.SERVER_PASSWORD }}
-      #     port: 22
-      #     script: |
-      #       sudo systemctl reload apache2
+          debug: true   # 👈 more detailed logs
