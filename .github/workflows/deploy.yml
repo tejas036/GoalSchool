@@ -69,7 +69,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          port: 22
+          port: 22022
           script: |
             echo "Connected to server"
             echo "Using base path: ${{ secrets.SERVER_PATH }}"
