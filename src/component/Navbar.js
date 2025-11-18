@@ -28,7 +28,8 @@ const Navbar = () => {
   const isActive = (path) => currentPath === path;
 
   return (
-    <nav className="bg-white shadow-lg  hover:shadow-xl transition-shadow z-50 ">
+<nav className="sticky top-0 bg-white shadow-lg hover:shadow-xl transition-shadow z-50">
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
@@ -37,7 +38,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-4 items-center">
+          <div className="hidden md:flex space-x-4 items-center ">
             <Link
               to="/"
               className={`text-gray-900 hover:text-gray-700 px-3 py-2 text-sm font-medium ${
