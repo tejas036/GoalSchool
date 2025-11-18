@@ -1,49 +1,75 @@
+name: CI/CD for GoalSchool
+
+on:
+  push:
+    branches:
+      - main        # change if your main branch is different (e.g. 'master')
+  workflow_dispatch: # allow manual trigger from GitHub UI
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build React app
+        run: npm run build
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
+    # 🔐 Permission-based: requires approval in 'production' environment
     environment:
       name: production
       url: http://goalschool.edu.in
 
     steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: react-build
-          path: build
-
-      - name: List build files
-        run: ls -R build
-
       - name: Debug connection variables (no password)
         run: |
           echo "SERVER_HOST: '${{ secrets.SERVER_HOST }}'"
           echo "SERVER_USER: '${{ secrets.SERVER_USER }}'"
           echo "SERVER_PATH: '${{ secrets.SERVER_PATH }}'"
+          if [ -z "${{ secrets.SERVER_HOST }}" ]; then echo "ERROR: SERVER_HOST is empty"; fi
+          if [ -z "${{ secrets.SERVER_USER }}" ]; then echo "ERROR: SERVER_USER is empty"; fi
+          if [ -z "${{ secrets.SERVER_PASSWORD }}" ]; then echo "ERROR: SERVER_PASSWORD is empty"; fi
+          if [ -z "${{ secrets.SERVER_PATH }}" ]; then echo "ERROR: SERVER_PATH is empty"; fi
 
-      - name: Test SSH and list target directory
+      - name: SSH to server and deploy (git pull + build)
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          port: 22022          # 👈 your SSH port
+          port: 22022                    # 👈 your SSH port
           script: |
+            set -e
             echo "Connected to server"
             echo "Using base path: ${{ secrets.SERVER_PATH }}"
-            echo "Base path listing:"
-            ls -la ${{ secrets.SERVER_PATH }} || echo "Base path missing!"
-            echo "Build path listing:"
-            ls -la ${{ secrets.SERVER_PATH }}/build || echo "build folder exists but is empty"
 
-      - name: Upload build to server (SCP)
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.SERVER_HOST }}
-          username: ${{ secrets.SERVER_USER }}
-          password: ${{ secrets.SERVER_PASSWORD }}
-          port: 22022          # 👈 same port here
-          source: "build/*"
-          target: "${{ secrets.SERVER_PATH }}/build"
-          debug: true
+            cd ${{ secrets.SERVER_PATH }}
+
+            echo "Pulling latest code from main..."
+            # if you really want sudo, you can add it before git, but usually not required:
+            # sudo git pull origin main
+            git pull origin main
+
+            echo "Installing dependencies..."
+            # sudo npm ci   # 👈 only if you MUST use sudo; better to keep as normal user
+            npm ci
+
+            echo "Building React app..."
+            # sudo npm run build
+            npm run build
+
+            echo "Deployment complete. Build is in ${{ secrets.SERVER_PATH }}/build"
