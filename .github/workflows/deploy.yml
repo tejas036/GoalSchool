@@ -88,7 +88,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           port: 22022
-          source: "build/*"
+          source: "build/*"  
           target: "${{ secrets.SERVER_PATH }}/build"
           debug: true   # more logs if something fails
 
