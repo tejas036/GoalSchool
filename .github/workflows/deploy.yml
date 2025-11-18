@@ -25,16 +25,33 @@ jobs:
       - name: Build React app
         run: npm run build
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: react-build
+          path: build/
+          retention-days: 1
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
-    # 🔐 Permission-based: requires approval in 'production' environment
+    # 🔐 This links to the 'production' environment with approval (permission-based)
     environment:
       name: production
       url: http://goalschool.edu.in
 
     steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: react-build
+          path: build
+
+      - name: List build files
+        run: ls -R build
+
+      # 🔍 Debug: check that secrets are present (without showing password)
       - name: Debug connection variables (no password)
         run: |
           echo "SERVER_HOST: '${{ secrets.SERVER_HOST }}'"
@@ -45,31 +62,43 @@ jobs:
           if [ -z "${{ secrets.SERVER_PASSWORD }}" ]; then echo "ERROR: SERVER_PASSWORD is empty"; fi
           if [ -z "${{ secrets.SERVER_PATH }}" ]; then echo "ERROR: SERVER_PATH is empty"; fi
 
-      - name: SSH to server and deploy (git pull + build)
+      # 🔍 Test SSH & directory on the server
+      - name: Test SSH and prepare target directory
         uses: appleboy/ssh-action@v0.1.10
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          port: 22022                    # 👈 your SSH port
+          port: 22022
           script: |
-            set -e
             echo "Connected to server"
             echo "Using base path: ${{ secrets.SERVER_PATH }}"
+            # Create GoalSchool + build dir if not exists
+            mkdir -p ${{ secrets.SERVER_PATH }}/build
+            echo "Listing base path:"
+            ls -la ${{ secrets.SERVER_PATH }}
+            echo "Listing build path:"
+            ls -la ${{ secrets.SERVER_PATH }}/build || echo "build folder exists but is empty"
 
-            cd ${{ secrets.SERVER_PATH }}
+      # 📤 Upload build files to server
+      - name: Upload build to server (SCP)
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          port: 22022
+          source: "build/*"  
+          target: "${{ secrets.SERVER_PATH }}"
+          debug: true   # more logs if something fails
 
-            echo "Pulling latest code from main..."
-            # if you really want sudo, you can add it before git, but usually not required:
-            # sudo git pull origin main
-            git pull origin main
-
-            echo "Installing dependencies..."
-            # sudo npm ci   # 👈 only if you MUST use sudo; better to keep as normal user
-            npm ci
-
-            echo "Building React app..."
-            # sudo npm run build
-            npm run build
-
-            echo "Deployment complete. Build is in ${{ secrets.SERVER_PATH }}/build"
+      # 🔁 Optional: reload Apache (only if you want, usually not required for static files)
+      # - name: Reload Apache
+      #   uses: appleboy/ssh-action@v0.1.10
+      #   with:
+      #     host: ${{ secrets.SERVER_HOST }}
+      #     username: ${{ secrets.SERVER_USER }}
+      #     password: ${{ secrets.SERVER_PASSWORD }}
+      #     port: 22
+      #     script: |
+      #       sudo systemctl reload apache2
