@@ -1,24 +1,27 @@
 
-import newsletter from "../assets/publications/newsletter.JPG";
+import newsletter from "../assets/magzine/jan24.jpg";
 import magzineJan from "../assets/magzine/monthly magazine JAN.pdf";
 import magzineFeb from "../assets/magzine/monthly magazine FEB.pdf";
 import magzineMar from "../assets/magzine/monthly magazine MARCH.pdf";
-import magzineJune from "../assets/magzine/monthly magazine (june).pdf";
-import magzineJuly from "../assets/magzine/monthly magazine(july).pdf";
-import magzineSept from "../assets/magzine/SEPTEMBER.pdf";
-import magzineOct from "../assets/magzine/OCTOBER.pdf";
+import magzineJune from "../assets/magzine/June Magazine  2025.pdf";
+import magzineJuly from "../assets/magzine/July,. Magazine 2025.pdf";
+import magzineSept from "../assets/magzine/September.Magazine  2025.pdf";
+import magzineOct from "../assets/magzine/october Magazine  2025.pdf";
 import magzineNov from "../assets/magzine/monthly magazine NOV.pdf";
 import magzineDec from "../assets/magzine/monthly magazine DEC.pdf";
+import magzineAug from "../assets/magzine/August Magazine  2025.pdf"
 
-import annualDayImg from "../assets/magzine/annual_day.JPG";
+import annualDayImg from "../assets/magzine/feb24.jpg";
 
-import annualDayImg2023 from '../assets/studentlife/AnnualDay2023.JPG'
-import juneImg from "../assets/magzine/june.JPG";
-import julyImg from "../assets/magzine/july.JPG";
-import septImg from "../assets/magzine/sept.JPG";
-import octImg from "../assets/magzine/oct.JPG";
-import novImg from "../assets/magzine/nov.JPG";
-import decImg from "../assets/magzine/dec.JPG";
+
+import juneImg from "../assets/magzine/june25.jpg";
+import julyImg from "../assets/magzine/july25.jpg";
+import septImg from "../assets/magzine/sep25.jpg";
+import octImg from "../assets/magzine/oct25.jpg";
+import novImg from "../assets/magzine/nov 24.jpg";
+import decImg from "../assets/magzine/dec24.jpg";
+import augImg from "../assets/magzine/aug25.jpg";
+import marchImg from "../assets/magzine/march24.jpg"
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 const PublicationsPage = () => {
@@ -45,7 +48,7 @@ const PublicationsPage = () => {
       title: "Monthly School Magazine March",
       description:
         "Graduation Day Celebration, Women Day Celebration, Summative Assesment II and more.",
-      image: septImg,
+      image: marchImg,
       link: magzineMar,
     },
     {
@@ -53,7 +56,7 @@ const PublicationsPage = () => {
       title: "Monthly School Magazine June",
       description:
         "School Reopen Day,World Environment Day,Father's Day, Yoga Day and more.",
-      image: annualDayImg2023,
+      image: juneImg,
       link: magzineJune,
     },
     {
@@ -66,14 +69,22 @@ const PublicationsPage = () => {
     },
     {
       id: 6,
-      title: "Monthly School Magazine September",
+      title: "Monthly School Magazine August",
       description:
-        "Teacher's Day,Ganesh Chaturthi Celebration,Parent - Teacher Meeting,Activity based lessons and more.",
-      image:juneImg ,
-      link: magzineSept,
+        "KISA Competition,Independance Day ,Raksha Bandhan Celebration,Ganesh Chaturthi Celebration.",
+      image: augImg,
+      link: magzineAug,
     },
     {
       id: 7,
+      title: "Monthly School Magazine September",
+      description:
+        "Teacher's Day,Ganesh Chaturthi Celebration,Parent - Teacher Meeting,Activity based lessons and more.",
+      image:septImg ,
+      link: magzineSept,
+    },
+    {
+      id: 8,
       title: "Monthly School Magazine October",
       description:
         "Gandhi Jayanti and Lal Bahadur Shastri Jayanti,Dussehra Celebration,Chairman Sir's Birthday Celebration and more.",
@@ -82,7 +93,7 @@ const PublicationsPage = () => {
       link: magzineOct,
     },
     {
-      id: 8,
+      id: 9,
       title: "Monthly School Magazine November",
       description:
         "Karnataka Rajyotsava,Diwali Celebration,Bhagvad Gita Abhiyana and more.",
@@ -90,7 +101,7 @@ const PublicationsPage = () => {
       link: magzineNov,
     },
     {
-      id: 8,
+      id: 10,
       title: "Monthly School Magazine December",
       description:
         "School Sports Fest, Parents Sport Day ,Bhagvad Gita Competittion and more.",

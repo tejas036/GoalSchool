@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 // import logo from "../assets/members/AramNayak2.jpg";
-import logo from "../assets/members/nayak.JPG";
+import logo from "../assets/members/nayak_new.JPG";
 
 const PrincipleMessage = () => {
   const [isVisible, setIsVisible] = useState(false);
