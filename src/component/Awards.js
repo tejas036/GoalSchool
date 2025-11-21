@@ -45,18 +45,18 @@ const cards = [
 
 const CardItem = ({ item, isVisible }) => (
   <div
-    className={`transform transition-all duration-1000 ease-out hover:shadow-xl ${
-      isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-    } ${item.bgColor} p-6 rounded-lg shadow-md border border-gray-200`}
+    className={`w-full transform transition-all duration-1000 ease-out hover:shadow-xl
+      ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}
+      ${item.bgColor} p-4 sm:p-6 rounded-xl shadow-md border border-gray-200`}
   >
-    <div className="mb-4">
+    <div className="mb-4 flex justify-center">
       <img
         src={item.image}
         alt="Award Logo"
-        className="w-16 h-16 mx-auto rounded-full"
+        className="w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover"
       />
     </div>
-    <h5 className="text-md font-semibold text-gray-800 text-center">
+    <h5 className="text-sm sm:text-md font-semibold text-gray-800 text-center leading-snug">
       {item.title}
     </h5>
   </div>
@@ -83,32 +83,27 @@ const Awards = () => {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    if (sectionRef.current) observer.observe(sectionRef.current);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
     };
   }, []);
 
   return (
     <section
       ref={sectionRef}
-      className="py-14 md:py-20 bg-white text-gray-700 cursor-pointer "
+      className="py-10 sm:py-14 md:py-20 bg-white text-gray-700"
     >
       <div className="container px-4 mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold md:text-[36px] text-blue-700">
+        <div className="text-center mb-10 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl font-bold md:text-[36px] text-blue-700">
             School Awards
           </h2>
-          {/* <p className="text-lg text-gray-500 mt-2">
-            Celebrating excellence in education
-          </p> */}
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+
+        {/* Responsive Grid Fix */}
+        <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
           {cards.map((item, i) => (
             <CardItem key={i} item={item} isVisible={isVisible} />
           ))}

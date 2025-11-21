@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import kindergarten from "../assets/admissions/CLASS11.JPG";
-import class1 from "../assets/admissions/CLASS123.JPG"; // ✅ Photo you mentioned
+import class1 from "../assets/admissions/CLASS123.JPG";
+import admissionBanner from "../assets/admissions/DSC_2376.JPG";
+ // ✅ Photo you mentioned
 import { Link } from "react-router-dom";
 
 const portfolios = [
@@ -76,17 +78,17 @@ const AdmissionPrograms = () => {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           {/* Left Side - Image */}
           <div className="flex justify-center">
-            <img
-              src={class1}
-              alt="Admissions"
-              className="rounded-2xl shadow-lg w-full max-w-md object-cover"
-            />
-          </div>
+  <img
+    src={admissionBanner} 
+    alt="Admissions"
+    className="rounded-2xl shadow-lg w-full max-w-md object-cover"
+  />
+</div>
 
           {/* Right Side - Text */}
           <div>
             <h2 className="text-sm md:text-2xl font-bold text-yellow-500 mb-6">
-              Admissions Open For Academic Year 2025-2026 (Kindergarten to Std X)
+              Admissions Open For Academic Year 2026-2027 (Kindergarten to Std X)
             </h2>
 
             <p className="text-sm font-semibold text-gray-500 mx-auto max-w-6xl sm:px-2 leading-relaxed">

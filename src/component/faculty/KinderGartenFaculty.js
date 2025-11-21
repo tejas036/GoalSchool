@@ -9,6 +9,7 @@ import Sangeeta from "../../assets/faculty/Pre-Primary/sangeeta.JPG";
 import Shweta from "../../assets/faculty/Pre-Primary/shweta.g.JPG";
 import Supriya from "../../assets/faculty/Pre-Primary/supriya.JPG";
 import Hemalata from "../../assets/faculty/Pre-Primary/hemalata.1.JPG";
+import VINAYA from "../../assets/juniorFaculty/1.png";  
 
 const facultyData = [
   {
@@ -65,6 +66,12 @@ const facultyData = [
     designation: "Gk Mentor",
     classesHandled: "Nursery, LKG",
   },
+{
+  name: "Ms. Vinaya Naik",
+  photo: VINAYA,
+  designation: "Computer Teacher (KG Section)",
+  classesHandled: "KG",
+},
 ];
 
 const KindergartenFaculty = () => {

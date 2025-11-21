@@ -51,13 +51,13 @@ const facilities = [
     description:
       "Advanced tech tools and labs to prepare students for the digital age, fostering innovation and digital skills.",
   },
-  {
-    icon: "🏠",
-    title: "Day Care Center",
-    path: "/facilities/day-care-center",
-    description:
-      "A safe and caring environment for the little ones, enabling parents to focus on work or studies.",
-  },
+  // {
+  //   icon: "🏠",
+  //   title: "Day Care Center",
+  //   path: "/facilities/day-care-center",
+  //   description:
+  //     "A safe and caring environment for the little ones, enabling parents to focus on work or studies.",
+  // },
 
   {
     icon: "⚕️",

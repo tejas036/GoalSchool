@@ -89,7 +89,7 @@ const facultyData = [
 
 const SeniorFaculty = () => {
   return (
-    <div className="bg-yellow-50  py-12">
+    <div className="bg-blue-50  py-12">
       <div className="max-w-7xl mx-auto px-6">
         <h2 className="text-4xl font-extrabold text-gray-800 text-center mb-8">
           Senior Faculty (Class 1 to 10)

@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import vissioj from "../../assets/About/Kids Section/11.JPG"; // Vision image
-import Mission from "../../assets/About/Kids Section/12.JPG"; // Mission image
+import vissioj from "../../assets/About/Kids Section/13.JPG"; // Vision image
+import Mission from "../../assets/About/Kids Section/12.JPG";
+import Motto from "../../assets/About/Kids Section/11.JPG"; // Mission image
 
 const VisionMission = () => {
   const [visibleSections, setVisibleSections] = useState({
@@ -128,7 +129,7 @@ const VisionMission = () => {
         <div className="relative w-full lg:w-[500px] mb-8 lg:mb-0 lg:pr-6">
           <div className="overflow-hidden rounded-tl-[180px] rounded-tr-[150px] rounded-br-[200px] rounded-bl-[50px]">
             <img
-              src={vissioj}
+              src={Motto}
               alt="Vision"
               className="w-[90%] h-auto object-cover"
             />

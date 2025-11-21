@@ -112,6 +112,8 @@ const booksData = {
       { subject: "Value Education", title: "Moral Values 8", publisher: "Vardhaman's Canvas" },
       { subject: "Drawing", title: "Draw and Colour 8", publisher: "Vidhya Bhavan" },
     ],
+    "Class IX": [],
+  "Class X": [],
   };
   
   
