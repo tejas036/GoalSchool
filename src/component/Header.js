@@ -34,7 +34,7 @@ const Header = () => {
       }}
     >
       {/* 🔥 OVERLAY REMOVED — CLEAN BACKGROUND NOW */}
- {/* <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-black/80"></div> */}
+ <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-black/10"></div>
       {/* Content */}
       <div className="z-10 container px-4">
         <div className="grid grid-cols-14">
