@@ -195,7 +195,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="grid-first-name"
           >
-            First Name
+            First Name <label className="text-red-600">* </label>
           </label>
           <input
             className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-2 px-3 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -205,6 +205,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="w-full md:w-1/2 px-3">
@@ -212,7 +213,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="grid-last-name"
           >
-            Last Name
+            Last Name <label className="text-red-600">* </label>
           </label>
           <input
             className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white"
@@ -222,6 +223,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            required
           />
         </div>
       </div>
@@ -231,7 +233,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="grid-email"
           >
-            Email Address
+            Email Address <label className="text-red-600">* </label>
           </label>
           <input
             className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-2 px-3 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -241,14 +243,15 @@ Saturday: 9:00 AM to 2:00 PM </p>
             name="email"
             value={formData.email}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="w-full md:w-1/2 px-3">
           <label
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="number"
-          >
-            Mobile Number
+          > 
+            Mobile Number  <label className="text-red-600">* </label>
           </label>
           <input
             className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-2 px-3 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -258,6 +261,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             name="mobileNumber"
             value={formData.mobileNumber}
             onChange={handleChange}
+            required
           />
         </div>
         <div className="w-full md:w-1/2 px-3">
@@ -265,7 +269,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
             htmlFor="select-class"
           >
-            Select Class
+            Select Class  <label className="text-red-600">* </label>
           </label>
           <select
             className="appearance-none block w-full bg-white text-gray-700 border border-gray-200 rounded py-2 px-3 mb-3 leading-tight focus:outline-none focus:bg-white"
@@ -273,6 +277,7 @@ Saturday: 9:00 AM to 2:00 PM </p>
             name="selectedClass"
             value={formData.selectedClass}
             onChange={handleChange}
+            required
           >
             <option value="" disabled>
               Select Class

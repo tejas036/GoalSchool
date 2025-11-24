@@ -5,13 +5,45 @@ import Footer from "./Footer";
 const ContactUs = () => {
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
 
-    setTimeout(() => {
-      setSent(false);
-    }, 3000);
+    const form = e.target;
+    const formData = new FormData(form);
+
+    const payload = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+    console.log(payload);
+
+    try {
+      const res = await fetch("https://api.goalcorporation.com/contactus-school", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!res.ok) {
+        throw new Error("Failed to send enquiry");
+      }
+
+      // success
+      setSent(true);
+      form.reset(); // clear the form
+
+      setTimeout(() => {
+        setSent(false);
+      }, 3000);
+    } catch (err) {
+      console.error(err);
+      // optionally show some error UI here
+      // e.g. toast or alert
+    }
   };
 
   return (
@@ -35,7 +67,10 @@ const ContactUs = () => {
                     </h1>
                     <div className="absolute bottom-0 w-full lg:p-11 p-5">
                       <div className="bg-white rounded-lg p-6 block">
-                        <a href="javascript:;" className="flex items-center mb-6">
+                        <a
+                          href="javascript:;"
+                          className="flex items-center mb-6"
+                        >
                           <svg
                             width={30}
                             height={30}
@@ -97,8 +132,8 @@ const ContactUs = () => {
                             />
                           </svg>
                           <h5 className="text-gray-700 text-base font-semibold leading-6 ml-5">
-                            Near Govt. Hospital Manki, Tq : Honnavar (U K) Pin Code
-                            : 581348
+                            Near Govt. Hospital Manki, Tq : Honnavar (U K) Pin
+                            Code : 581348
                           </h5>
                         </a>
                       </div>
@@ -113,7 +148,6 @@ const ContactUs = () => {
                 className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-32"
               >
                 <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
-
                   {/* SUCCESS MESSAGE */}
                   {sent && (
                     <div
@@ -136,7 +170,7 @@ const ContactUs = () => {
                         htmlFor="first-name"
                         className="block text-sm font-semibold leading-6 text-gray-900"
                       >
-                        First name
+                        First name <label className="text-red-600">* </label>
                       </label>
                       <div className="mt-2.5">
                         <input
@@ -145,6 +179,7 @@ const ContactUs = () => {
                           autoComplete="given-name"
                           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                           name="firstName"
+                          required
                         />
                       </div>
                     </div>
@@ -154,7 +189,7 @@ const ContactUs = () => {
                         htmlFor="last-name"
                         className="block text-sm font-semibold leading-6 text-gray-900"
                       >
-                        Last name
+                        Last name <label className="text-red-600">* </label>
                       </label>
                       <div className="mt-2.5">
                         <input
@@ -163,6 +198,7 @@ const ContactUs = () => {
                           autoComplete="family-name"
                           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                           name="lastName"
+                          required
                         />
                       </div>
                     </div>
@@ -172,7 +208,7 @@ const ContactUs = () => {
                         htmlFor="email"
                         className="block text-sm font-semibold leading-6 text-gray-900"
                       >
-                        Email
+                        Email <label className="text-red-600">* </label>
                       </label>
                       <div className="mt-2.5">
                         <input
@@ -181,6 +217,7 @@ const ContactUs = () => {
                           autoComplete="email"
                           className="block w-full rounded-md border-0 px-3.5 py-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                           name="email"
+                          required
                         />
                       </div>
                     </div>
