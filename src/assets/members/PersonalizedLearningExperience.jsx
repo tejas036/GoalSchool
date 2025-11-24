@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../component/Navbar"; // ✅ Navbar path
 import Footer from "../../component/Footer"; // ✅ Footer path
-import personalisedImage from "../../assets/featureSectionImages/personalisedImage.jpg";
+import personalisedImage from "../../assets/featureSectionImages/personalisedImagesss.jpg";
 
 const PersonalizedLearningExperience = () => {
   return (
