@@ -53,7 +53,7 @@ const SuccessStories = () => {
   const sliderRef = useRef(null);
 
   return (
-    <section className="py-16">
+    <section className="py-16"  id="success-stories">
       <div className="mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-orange-500 mb-6">
           Success Stories

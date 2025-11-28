@@ -23,13 +23,13 @@ const facilities = [
     description:
       "Professional guidance and support for students' mental health and career planning, ensuring holistic development.",
   },
-  {
-    icon: "🍽️",
-    title: "Cafeteria",
-    path: "/facilities/cafeteria",
-    description:
-      "A hygienic and spacious cafeteria offering healthy and delicious food options, catering to diverse tastes.",
-  },
+  // {
+  //   icon: "🍽️",
+  //   title: "Cafeteria",
+  //   path: "/facilities/cafeteria",
+  //   description:
+  //     "A hygienic and spacious cafeteria offering healthy and delicious food options, catering to diverse tastes.",
+  // },
   {
     icon: "🚍",
     title: "Transportation",
@@ -44,13 +44,13 @@ const facilities = [
     description:
       "Round-the-clock surveillance and security personnel ensuring a safe campus environment.",
   },
-  {
-    icon: "💻",
-    title: "Technology",
-    path: "/facilities/technology",
-    description:
-      "Advanced tech tools and labs to prepare students for the digital age, fostering innovation and digital skills.",
-  },
+  // {
+  //   icon: "💻",
+  //   title: "Technology",
+  //   path: "/facilities/technology",
+  //   description:
+  //     "Advanced tech tools and labs to prepare students for the digital age, fostering innovation and digital skills.",
+  // },
   // {
   //   icon: "🏠",
   //   title: "Day Care Center",

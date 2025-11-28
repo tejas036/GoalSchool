@@ -42,7 +42,7 @@ const PrincipleMessage = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-2 shadow-lg rounded-lg p-4 md:p-8">
         {/* Image Section */}
-        <div className="col-span-1 md:col-span-1 flex items-center justify-center mb-4 md:mb-0">
+        <div className="col-span-1 md:col-span-1 flex items-start justify-center mb-4 md:mb-0">
           <img
             className="w-72 h-48 md:w-full md:h-96 rounded-md shadow-md bg-contain"
             src={logo}
