@@ -1,6 +1,8 @@
 import React from 'react';
 import campuslifephoto from '../../assets/About/IMG_5553.JPG'
+import { useNavigate } from 'react-router-dom';
 const CampusLifeDetails = () => {
+  const navigate=useNavigate();
   return (
     <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
       <h2 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
@@ -117,9 +119,9 @@ const CampusLifeDetails = () => {
             facilities, inspiring architecture, and lush greenery, it’s the
             perfect place to unlock potential.
           </p>
-          <button className="items-center text-[#1053F3] justify-center rounded-lg border border-[#6A65FF] px-4 py-2 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200 bg-[#5138EE]/10">
+          {/* <button className="items-center text-[#1053F3] justify-center rounded-lg border border-[#6A65FF] px-4 py-2 font-semibold hover:shadow-lg hover:drop-shadow transition duration-200 bg-[#5138EE]/10">
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -131,7 +133,8 @@ const CampusLifeDetails = () => {
         <p className="text-lg mb-6">
           Be a part of a community that values learning, growth, and success.
         </p>
-        <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-bold shadow-md hover:bg-gray-100 transition duration-300">
+        <button className="bg-white text-blue-600 px-6 py-2 rounded-lg font-bold shadow-md hover:bg-gray-100 transition duration-300" 
+         onClick={() => navigate("/contact")}>
           Apply Now
         </button>
       </div>

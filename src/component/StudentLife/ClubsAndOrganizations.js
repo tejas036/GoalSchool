@@ -92,9 +92,9 @@ const ClubsAndOrganizations = () => {
           Join a club today and experience the joy of learning, teamwork, and
           friendship.
         </p>
-        <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold shadow-md hover:bg-gray-100 transition duration-300">
+        {/* <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold shadow-md hover:bg-gray-100 transition duration-300">
           Join a Club
-        </button>
+        </button> */}
       </div>
     </div>
   );

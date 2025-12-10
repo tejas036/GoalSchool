@@ -7,7 +7,7 @@ import magzineJune from "../assets/magzine/June Magazine  2025.pdf";
 import magzineJuly from "../assets/magzine/July,. Magazine 2025.pdf";
 import magzineSept from "../assets/magzine/September.Magazine  2025.pdf";
 import magzineOct from "../assets/magzine/october Magazine  2025.pdf";
-import magzineNov from "../assets/magzine/monthly magazine NOV.pdf";
+import magzineNov from "../assets/magzine/November 2025.pdf";
 import magzineDec from "../assets/magzine/monthly magazine DEC.pdf";
 import magzineAug from "../assets/magzine/August Magazine  2025.pdf"
 

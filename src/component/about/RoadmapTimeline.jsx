@@ -1,5 +1,5 @@
 
-import timeline from "../../assets/members/timeline.jpg";
+import timeline from "../../assets/members/timeline2.jpg";
 /**
  * Exact-look timeline/roadmap component (JSX + Tailwind)
  * - Preserves original horizontal layout

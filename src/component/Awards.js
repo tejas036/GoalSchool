@@ -128,6 +128,7 @@ import educationToday2019 from "../assets/awards/global2.jpg";
 import educationToday2020 from "../assets/awards/excellence.jpg";
 import globalExcellence2023 from "../assets/awards/globaltriumph.jpg";
 import globalExcellence2024 from "../assets/awards/educationtoday.jpg";
+import dubaiAward from "../assets/awards/dubaiaward.JPG";
 
 const cards = [
   {
@@ -159,6 +160,18 @@ const cards = [
     title:
       "Exclusive Contribution in School Education by the Global Triumph Foundation 2024",
     image: globaltriumph,
+    bgColor: "bg-red-50",
+  },
+  {
+    title:
+      "Ranked No.1 in Honavar under the ICSE City-wise category conducted by Education Today-2024",
+    image: educationToday2020,
+    bgColor: "bg-red-50",
+  },
+  {
+    title:
+      "Dubai India International Iconic Awards- 2025 for the Exclusive contribution and for setting an exemplary standards in Education.",
+    image: dubaiAward,
     bgColor: "bg-red-50",
   },
 ];
