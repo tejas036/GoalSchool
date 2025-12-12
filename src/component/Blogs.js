@@ -5,11 +5,12 @@ import { faClock } from "@fortawesome/free-solid-svg-icons";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 
-import leadership from '../assets/blog/leadershipskil.jpg'
-import usericon from '../assets/blog/usericonm.png'
-import exampreparation from '../assets/blog/exampr.webp'
-import extracurricular from '../assets/blog/extracurricular.jpg'
-import stem from '../assets/blog/stemeducation.jpeg'
+import leadership from "../assets/blog/leadershipskil.jpg";
+import usericon from "../assets/blog/usericonm.png";
+import exampreparation from "../assets/blog/exampr.webp";
+import extracurricular from "../assets/blog/extracurricular.jpg";
+import stem from "../assets/blog/stemeducation.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const blogs = [
   {
@@ -18,7 +19,7 @@ const blogs = [
       "Discover how STEM education helps students develop critical thinking, creativity, and problem-solving skills for the future.",
     author: "Mr Nandkishor Jha",
     date: "December 10, 2024",
-    image:stem, // Replace with a real image
+    image: stem, // Replace with a real image
   },
   {
     title: "Benefits of Extracurricular Activities for Students",
@@ -38,8 +39,16 @@ const blogs = [
   },
 ];
 
+
 const BlogItem = ({ blog }) => {
   const { title, description, author, date, image } = blog;
+  const hanndleNavigation = () => {
+    if (title === "Importance of STEM Education in Schools") {
+      navigate("/blogs/stem-education");
+    }
+    // you can add more conditions here for other blogs if needed
+  };
+  const navigate = useNavigate(); // ✅ inside component
 
   return (
     <article className="flex flex-col shadow-lg bg-white rounded-lg overflow-hidden pb-2 h-full">
@@ -49,7 +58,7 @@ const BlogItem = ({ blog }) => {
           <h4 className="font-medium text-2xl mb-1">{title}</h4>
           <p className="opacity-80 mb-2">
             <span className="mr-2 text-sm">
-              By {" "}
+              By{" "}
               <a href="#!" className="text-blue-600 font-semibold text-sm">
                 {author}
               </a>
@@ -63,7 +72,9 @@ const BlogItem = ({ blog }) => {
         </div>
         <div>
           <a
-            href="#!"
+            onClick={() => {
+              hanndleNavigation(title);
+            }}
             className="bg-transparent hover:bg-blue-600 border border-blue-600 hover:text-white py-2 px-5 rounded transition"
           >
             Read More
@@ -124,54 +135,51 @@ const FeaturedBlogItem = () => {
 
 const BlogPage = () => {
   return (
- <>
-    <Navbar/>
+    <>
+      <Navbar />
 
-
-    <section className="light py-14 md:py-24 text-stone-800 overflow-hidden">
-      <div className="container md:px-8">
-        {/* Page Heading */}
-        <div className="grid grid-cols-12 justify-center">
-          <div className="col-span-12 lg:col-span-8 lg:col-start-3 lg:col-end-11 text-center">
-            <h2 className="text-[32px] lg:text-[45px] leading-none font-bold mb-4">
-              Explore the World of Learning
-            </h2>
-            <p className="text-lg font-medium opacity-80 lg:px-12 mb-9">
-              From inspiring success stories to essential tips, discover
-              insights that shape the future of education.
-            </p>
-            <a
-              href="#!"
-              className="bg-blue-600 hover:bg-opacity-90 text-white font-bold border border-blue-600 py-3 px-7 rounded transition"
-            >
-              View All Posts
-            </a>
-          </div>
-        </div>
-
-        {/* Featured Blog */}
-        <div className="grid grid-cols-12 items-center mt-12 gap-6">
-          <div className="col-span-12">
-            <FeaturedBlogItem />
-          </div>
-
-          {/* Blog Posts */}
-          {blogs.map((blog, i) => (
-            <div
-              className="col-span-12 md:col-span-6 lg:col-span-4 h-full mt-6"
-              key={i}
-            >
-              <BlogItem blog={blog} />
+      <section className="light py-14 md:py-24 text-stone-800 overflow-hidden">
+        <div className="container md:px-8">
+          {/* Page Heading */}
+          <div className="grid grid-cols-12 justify-center">
+            <div className="col-span-12 lg:col-span-8 lg:col-start-3 lg:col-end-11 text-center">
+              <h2 className="text-[32px] lg:text-[45px] leading-none font-bold mb-4">
+                Explore the World of Learning
+              </h2>
+              <p className="text-lg font-medium opacity-80 lg:px-12 mb-9">
+                From inspiring success stories to essential tips, discover
+                insights that shape the future of education.
+              </p>
+                {/* <a
+                  href="#!"
+                  className="bg-blue-600 hover:bg-opacity-90 text-white font-bold border border-blue-600 py-3 px-7 rounded transition"
+                >
+                  View All Posts
+                </a> */}
             </div>
-          ))}
+          </div>
+
+          {/* Featured Blog */}
+          <div className="grid grid-cols-12 items-center mt-12 gap-6">
+            <div className="col-span-12">
+              <FeaturedBlogItem />
+            </div>
+
+            {/* Blog Posts */}
+            {blogs.map((blog, i) => (
+              <div
+                className="col-span-12 md:col-span-6 lg:col-span-4 h-full mt-6"
+                key={i}
+              >
+                <BlogItem blog={blog} />
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-
-
-    <Footer/>
- </>
+      <Footer />
+    </>
   );
 };
 

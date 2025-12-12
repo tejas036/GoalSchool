@@ -38,6 +38,7 @@ import PhysicsLabPage from "./pages/Facilities/Physicslabpage";
 import ChemistryLabPage from "./pages/Facilities/ChemistryLabPage";
 import BiologyLabPage from "./pages/Facilities/BiologyLabPage";
 import ComputerLabPage from "./pages/Facilities/ComputerLabPage";
+import StemEducationPage from "./component/Blog/StemEducationPage";
 
 
 // Custom hook to scroll to the top on route change
@@ -98,6 +99,8 @@ function App() {
         <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/student-life" element={<StudentLifePage />} />
         <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/blogs/stem-education" element={<StemEducationPage />} />
+
         <Route path="/admissionprograms" element={<AdmissionProgramsPage />} />
         <Route path="/facilities" element={<FacilitiesPage />}></Route>
         <Route path="/facilities/chemistry-lab" element={<ChemistryLabPage />} />
