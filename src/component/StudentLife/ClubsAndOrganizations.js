@@ -8,7 +8,7 @@ const ClubsAndOrganizations = () => {
       description:
         "Sharpen your critical thinking and public speaking skills by debating on contemporary issues.",
       icon: "🎤",
-      path: "/facilities/debate-club",
+      path: "/student-life/debate-club",
     },
     {
       name: "Music Club",
@@ -36,7 +36,7 @@ const ClubsAndOrganizations = () => {
       description:
         "Discover the joy of acting and storytelling in our vibrant drama club.",
       icon: "🎭",
-      path: "/facilities/drama-club",
+      path: "/student-life/drama-club",
     },
     {
       name: "Photography Club",
